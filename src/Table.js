@@ -1,6 +1,7 @@
 var UnderlinedCell = require("./UnderlinedCell.js").UnderlinedCell;
 var Cell = require("./Cell.js").Cell;
 var RCell = require("./RCell.js").RCell;
+var StretchCell = require("./StretchCell.js").StretchCell;
 
 function rowHeights(rows) {
   return rows.map(function(row) {
@@ -50,7 +51,7 @@ function dataTable(data) {
       var value = row[name];
 
       if (/^\s*[-+]?\d+([.]\d*)?([eE][-+]?\d+)?\s*$/.test(value))
-        return new RCell(String(value));
+        return new StretchCell(new RCell(String(value)),1,1);
       else
         return new Cell(String(value));
     });
