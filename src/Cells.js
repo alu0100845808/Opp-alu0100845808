@@ -22,9 +22,9 @@ Cell.prototype.minHeight = function() {
 
 Cell.prototype.draw = function(width, height) { //crea la cell
     var result = [];
-    for (var i = 0; i < height; i++) {  //
-        var line = this.text[i] || "";
-        result.push(line + repeat(" ", width - line.length));
+    for (var i = 0; i < height; i++) {
+        var line = this.text[i] || ""; //coje el texto en caso de que exista sino pone vacio
+        result.push(line + repeat(" ", width - line.length)); //pone tantos espacios como necesite para llegar al minwith
     }
     return result;
 };
