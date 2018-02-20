@@ -1,6 +1,7 @@
-var input = require("./input.json");
+var input = require("input.json");
+var Table = require("Table");
 
-var Cell = require("./Cell.js").Cell;
-var drawAllTable = require("./Table.js").drawAllTable;
+debugger;
 
-console.log(drawAllTable(input));
+var tabla = new Table();
+console.log(tabla.drawAllTable(input));
