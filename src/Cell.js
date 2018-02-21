@@ -1,4 +1,4 @@
-class TCell {
+class Cell {
   constructor(text) {
     this.text = text.split("\n");
 }
@@ -23,3 +23,5 @@ minHeight = function() {
 };
 
 }
+
+module.exports = Cell
