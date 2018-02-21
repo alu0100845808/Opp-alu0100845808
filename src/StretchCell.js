@@ -7,15 +7,15 @@ class StretchCell {
 }
 
 
-  minWidth = function() {
+  minWidth () {
     return Math.max(this.width,this.inner.minWidth());
   };
 
-  minHeight = function() {
+  minHeight () {
     return Math.max(this.height,this.inner.minHeight());
   };
 
-  draw = function(width, height) {
+  draw (width, height) {
     return this.inner.draw(width,height);
   };
 }
