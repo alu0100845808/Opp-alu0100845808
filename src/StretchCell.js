@@ -1,22 +1,22 @@
 
-function StretchCell(inner, width, height) {
-  this.inner = inner;
-  this.width= width;
-  this.height = height;
+class StretchCell {
+  constructor(inner,withd,height) {
+    this.inner = inner;
+    this.withd = withd;
+    this.height = height;
 }
 
-StretchCell.prototype.minWidth = function() {
-  return Math.max(this.width,this.inner.minWidth());
-};
 
-StretchCell.prototype.minHeight = function() {
-  return Math.max(this.height,this.inner.minHeight());
-};
+  minWidth = function() {
+    return Math.max(this.width,this.inner.minWidth());
+  };
 
-StretchCell.prototype.draw = function(width, height) {
-  return this.inner.draw(width,height);
-};
+  minHeight = function() {
+    return Math.max(this.height,this.inner.minHeight());
+  };
 
-module.exports = {
-  StretchCell: StretchCell
+  draw = function(width, height) {
+    return this.inner.draw(width,height);
+  };
 }
+module.exports = StretchCell
