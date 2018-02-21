@@ -2,7 +2,7 @@ var UnderlinedCell = require("UnderlinedCell")
 var Cell = require("Cell")
 var RCell = require("RCell")
 
-class DTable {
+class Table {
   constructor () {}
 
   drawAllTable(data) {
@@ -66,4 +66,4 @@ class DTable {
   }
 }
 
-module.exports = DTable
+module.exports = Table
